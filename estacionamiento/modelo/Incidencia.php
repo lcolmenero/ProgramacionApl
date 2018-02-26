@@ -9,21 +9,37 @@
 /**
  * Description of Incidencia
  *
- * @author lcolmenero
+ * @author lcolmenero, hpastor, bramirez
  */
 class Incidencia {
-    private $numIncidencia;
-    private $descripcion;
-    
+    private $idIncidencia;
+    private $descripcion;Usuario
+	private $fechaIncidencia;
+    private $usuario;
+	private $registro;
+	
     function __construct() {
         
     }
+	
+	function setUsuario( $usuario){
+		$this->usuario;
+	}
+	
+	function setRegistro( $registro){
+		$this->registro;
+	}
+	
     function getNumIncidencia() {
         return $this->numIncidencia;
     }
 
     function getDescripcion() {
         return $this->descripcion;
+    }
+	
+	function getFechaIncidencia() {
+        return $this->fechaIncidencia;
     }
 
     function setNumIncidencia($numIncidencia) {
@@ -34,5 +50,8 @@ class Incidencia {
         $this->descripcion = $descripcion;
     }
 
+	function setFechaIncidencia($fechaIncidencia) {
+        $this->fechaIncidencia = $fechaIncidencia;
+    }
 
 }

@@ -9,14 +9,15 @@
 /**
  * Description of Vehiculo
  *
- * @author lcolmenero
+ * @author lcolmenero, hpastor, bramirez
  */
 class Vehiculo {
-    protected $numPlaca;
-    protected $marca;
-    protected $modelo;
-    protected $color;
-    protected $usuario;
+    public $idVehiculo;
+	public $numPlaca;
+    public $marca;
+    public $modelo;
+    public $color;
+    public $usuario;
             
      function __construct() {
         
@@ -61,9 +62,6 @@ class Vehiculo {
         $this->usuario = $usuario;
     }
 
-
-    
-
 }
 class Carro extends Vehiculo{
     private $licenciaConducir;
@@ -73,6 +71,7 @@ class Moto extends Vehiculo{
     private $tarjetaCirculacion;
 }
 class Bicicleta extends Vehiculo{
+	private $descripcion;
 }
 class Cuatrimoto extends Vehiculo{
     private $licenciaConducir;

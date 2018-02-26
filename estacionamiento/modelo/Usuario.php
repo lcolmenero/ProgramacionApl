@@ -9,21 +9,25 @@
 /**
  * Description of Usuario
  *
- * @author lcolmenero
+ * @author lcolmenero, hpastor, bramirez
  */
 class Usuario{
-    protected $id;
-    protected $nombreCompleto;
-    protected $correoElectronico;
-    protected $numTelefonoFijo;
-    protected $numTelefonoMovil;
-    protected $area;
-    protected $numTarjetaEstacionamiento;
-    protected $horaEntrada;
-    protected $horaSalida;
+    public $id;
+    public $nombreCompleto;
+    public $correoElectronico;
+    public $numTelefonoFijo;
+    public $numTelefonoMovil;
+    public $area;
+    public $numTarjetaEstacionamiento;
+    public $CodigoBarras;
+	private $Registro;
     
     function __construct() {
-        
+    
+	function setRegistro( $registro){
+		$this->registro;
+	}
+	
     }
     function getId() {
         return $this->id;
@@ -89,33 +93,17 @@ class Usuario{
         $this->numTarjetaEstacionamiento = $numTarjetaEstacionamiento;
     }
 
-    function setHoraEntrada($horaEntrada) {
-        $this->horaEntrada = $horaEntrada;
+    function setCodigoBarras($CodigoBarras) {
+        $this->CodigoBarras = $CodigoBarras;
     }
-
-    function setHoraSalida($horaSalida) {
-        $this->horaSalida = $horaSalida;
-    }
-
-
-    
-
 
 }
 class Alumno extends Usuario{
     private $numeroControl;
 }
-class Docentes extends Usuario{
+
+class Empleado extends Usuario{
     private $numeroEmpleado;
-   
-}
-class Administrativo extends Usuario{
-    private $numeroEmpleado;
-    
-}
-class GuardiaEstacionamiento extends Usuario{
-    private $numeroEmpleado;
-}
-class AdministradorEstacionamiento extends Usuario{
-    private $numeroEmpleado;
+	private $puesto;
+	private $noExtension;
 }
